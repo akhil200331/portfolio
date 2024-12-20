@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+  <header>
+    <nav class="appbar">
+      <a class="nav2_a" href="portfolio.html">About</a>
+      <a class="nav2_a" href="Education.html">Education</a>
+      <a class="nav2_a" href="Skills.html">Skills</a>
+      <a class="nav2_a" href="Projects.html">Projects</a>
+      <a class="nav2_a" href="Certifications.html">Certifications</a>
+      <a class="nav2_a" href="Activities.html">Extra Circular Activities</a>
+      <a class="nav2_a" href="Interests.html">Interests</a>
+      <a class="nav2_a" href="Contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <section id="contact">
+    <i id="icon" class="fas fa-user"></i>
+    <h1>CONTACT US</h1>
+    <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+  </section>
+
+  <script>
+    // Check if there is any stored contact data in localStorage
+    window.onload = function() {
+      const storedName = localStorage.getItem('contactName');
+      const storedEmail = localStorage.getItem('contactEmail');
+      const storedMessage = localStorage.getItem('contactMessage');
+
+      if (storedName && storedEmail && storedMessage) {
+        document.getElementById('stored-name').innerText = storedName;
+        document.getElementById('stored-email').innerText = storedEmail;
+        document.getElementById('stored-message').innerText = storedMessage;
+      }
+    };
+
+    // Store form data in localStorage when the form is submitted
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Save to localStorage
+      localStorage.setItem('contactName', name);
+      localStorage.setItem('contactEmail', email);
+      localStorage.setItem('contactMessage', message);
+
+
+      // Optionally, you can clear the form after submission
+      document.getElementById('contact-form').reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body{
+  /*background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-repeat: no-repeat;
+  background-size: 100%;*/
+  background-color: #081c29;
+ font-family: 'Poppins', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+header{
+  padding-top: 15px;
+
+  width: 100%;
+  background-color: #06112a;
+}
+
+.appbar{
+  height: 40px;
+  padding-left: 100px;
+}
+.appbar a{
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-left: 2em;
+  text-decoration: none;
+  color: white;
+  
+  display: inline-block;
+}
+.nav2_a::after{
+       content: '';
+       display: block;
+       width: 0;    /* Hide border initially */
+       height: 5px;
+       background: #14f7f7;
+       transition: width 0.3s ease;
+    }
+.nav2_a:hover::after{
+  width: 100%;
+}
+
+
+/*PROJECTS*/
+#Activity{
+  color: white;
+  margin-top: 50px;
+  height: 320px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+#Activity h1{
+  margin-left: 45%;
+}
+#icon{
+  font-size: 28px;
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 33%;
+}
+
+
+.Activity-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+
+.activity-card:hover {
+    transform: translateY(-10px);
+}
+.activity-card {
+    background-color: #2f2f33;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.activity-icon {
+    font-size: 50px;
+    color: #14f7f7; /* Orange shade for cultural icons */
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #14f7f7;
+    margin: 10px 0;
+}
+
+.activity-card p {
+    font-size: 14px;
+    color: #fff;
+    margin: 5px 0;
+    line-height: 1.5;
+}
