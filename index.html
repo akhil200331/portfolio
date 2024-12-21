@@ -12,6 +12,11 @@
 </head>
 <body>
   <header>
+    <div id="hamburger-btn" class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <nav class="appbar">
       <a class="nav2_a" href="index.html">About</a>
       <a class="nav2_a" href="Education.html">Education</a>
@@ -51,6 +56,23 @@
     </section>
     
  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const nav = document.querySelector('.appbar');
+  
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav2_a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+});
   function View(){
     const link="https://drive.google.com/file/d/1mlGn66bsO_ru0xGOFqLSIK-cstYbM9SM/view?usp=drive_link";
     window.open(link,"_blank");
