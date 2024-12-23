@@ -1,3 +1,4 @@
+
 body{
   /*background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-repeat: no-repeat;
@@ -8,14 +9,17 @@ body{
 *{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   
 }
 header{
   padding-top: 15px;
-
+  position: fixed;
   width: 100%;
   background-color: #06112a;
+  z-index: 10;
 }
+
 
 .appbar{
   height: 40px;
@@ -43,13 +47,41 @@ header{
 }
 
 
+
+
+
+
+/* Media Queries */
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
 /*Education*/
 #education{
   color: white;
-  margin-top: 50px;
+  margin-top: 0;
   height: 320px;
   width: 80%;
   margin-left: 10%;
+  padding-top: 70px;
+  gap: 20px;
+  justify-content: center;
 }
 
 
@@ -89,3 +121,276 @@ header{
     color: #b3b3b3;
     font-size: 0.9rem;
 }
+/*Responsive*/
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    position: static;
+  }
+  .appbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #education{
+    width: 70%;
+  }
+ .education-card{
+  margin-left: 12%;
+ }
+  #education i{
+  margin-left: 25%;
+ }
+ 
+ header {
+    height: 40px;  /* Increased height to accommodate hamburger */
+    background-color: #06112a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 1002;
+  }
+
+  .appbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;  /* Start below header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);  /* Full height minus header */
+    background-color: #06112a;
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+  }
+
+  .appbar.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .appbar a {
+    padding: 15px;
+    width: 100%;
+    margin-left: -2%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+  }
+.nav2_a:hover::after{
+  width: 0%;
+}
+  .appbar a:hover {
+    background-color: rgba(20, 247, 247, 0.1);
+  }
+
+  /* Hamburger animation classes */
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+}
+
+@media (max-width: 480px) {
+  
+  .appbar a {
+    font-size: 1em;
+    padding: 0 0.4em;
+  }
+  #education{
+    width: 60%;
+  }
+ .education-card{
+  margin-left: 15%;
+ }
+ #education i{
+  margin-left: 15%;
+ }
+ 
+ header {
+    height: 40px;  /* Increased height to accommodate hamburger */
+    background-color: #06112a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 1002;
+  }
+
+  .appbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;  /* Start below header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);  /* Full height minus header */
+    background-color: #06112a;
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+  }
+
+  .appbar.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .appbar a {
+    padding: 15px;
+    width: 100%;
+    margin-left: -4%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+  }
+.nav2_a:hover::after{
+  width: 0%;
+}
+  .appbar a:hover {
+    background-color: rgba(20, 247, 247, 0.1);
+  }
+
+  /* Hamburger animation classes */
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+}
+@media (min-width: 769px) and  (max-width: 1068px) {
+  #education{
+    width: 80%;
+  }
+  #education i{
+  margin-left: 30%;
+ }
+ 
+header {
+    height: 40px;  /* Increased height to accommodate hamburger */
+    background-color: #06112a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 1002;
+  }
+
+  .appbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;  /* Start below header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);  /* Full height minus header */
+    background-color: #06112a;
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+  }
+
+  .appbar.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .appbar a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    margin-left: -2%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+  }
+.nav2_a:hover::after{
+  width: 0%;
+}
+  .appbar a:hover {
+    background-color: rgba(20, 247, 247, 0.1);
+  }
+
+  /* Hamburger animation classes */
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+}
+
