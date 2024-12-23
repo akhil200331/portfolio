@@ -12,6 +12,11 @@
 </head>
 <body>
   <header>
+    <div id="hamburger-btn" class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <nav class="appbar">
       <a class="nav2_a" href="index.html">About</a>
       <a class="nav2_a" href="Education.html">Education</a>
@@ -33,7 +38,7 @@
                 <p>A sophisticated machine learning solution leveraging deep learning and attention mechanisms to predict Parkinson's disease. The model incorporates Explainable AI (XAI) techniques for transparent decision-making.</p>
                 <div class="tech-stack">Python • TensorFlow • Keras • XAI • Attention</div>
                 <div class="project-links">
-                    <a href="https://github.com/akhil200331/parkinsons-prediction" class="project-link">
+                    <a href="https://github.com/akhil200331/Parkinson-Disease-Prediction-Using-XAI-and-Attention-Mechanism" class="project-link">
                         <i class="fab fa-github"></i> View Project
                     </a>
                 </div>
@@ -57,7 +62,7 @@
                 <p>A state-of-the-art deep learning application that accurately identifies dog breeds from images. Utilizing transfer learning with MobileNet-v2 architecture for fast and accurate breed classification.</p>
                 <div class="tech-stack">Python • TensorFlow • Deep Learning</div>
                 <div class="project-links">
-                    <a href="https://github.com/akhil200331/dog-breed-classifier" class="project-link">
+                    <a href="https://github.com/akhil200331/Dog-Breed-Identification-Using-Transfer-Learning" class="project-link">
                         <i class="fab fa-github"></i> View Project
                     </a>
                 </div>
@@ -70,7 +75,7 @@
     </p>
     <div class="tech-stack">HTML • CSS • JavaScript • PHP • MySQL</div>
     <div class="project-links">
-        <a href="https://github.com/akhil200331/online-shopping" class="project-link">
+        <a href="https://github.com/akhil200331/Online-Shopping-website" class="project-link">
             <i class="fab fa-github"></i> View Project
         </a>
     </div>
@@ -80,6 +85,24 @@
 
     </section>
     
- 
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const nav = document.querySelector('.appbar');
+  
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav2_a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+});
+ </script>
 </body> 
 </html>
