@@ -10,6 +10,11 @@
 </head>
 <body>
   <header>
+    <div id="hamburger-btn" class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <nav class="appbar">
       <a class="nav2_a" href="index.html">About</a>
       <a class="nav2_a" href="Education.html">Education</a>
@@ -45,36 +50,23 @@
   </section>
 
   <script>
-    // Check if there is any stored contact data in localStorage
-    window.onload = function() {
-      const storedName = localStorage.getItem('contactName');
-      const storedEmail = localStorage.getItem('contactEmail');
-      const storedMessage = localStorage.getItem('contactMessage');
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const nav = document.querySelector('.appbar');
+  
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
 
-      if (storedName && storedEmail && storedMessage) {
-        document.getElementById('stored-name').innerText = storedName;
-        document.getElementById('stored-email').innerText = storedEmail;
-        document.getElementById('stored-message').innerText = storedMessage;
-      }
-    };
-
-    // Store form data in localStorage when the form is submitted
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      // Save to localStorage
-      localStorage.setItem('contactName', name);
-      localStorage.setItem('contactEmail', email);
-      localStorage.setItem('contactMessage', message);
-
-
-      // Optionally, you can clear the form after submission
-      document.getElementById('contact-form').reset();
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav2_a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
     });
-  </script>
+  });
+});
+ </script>
 </body>
 </html>
