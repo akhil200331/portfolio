@@ -24,8 +24,8 @@ position: fixed;
 }
 .appbar a{
   margin-bottom: 5px;
-  font-size: 1.5em;
-  margin-left: 2em;
+  font-size: 1.4em;
+  margin-left: 1.5em;
   text-decoration: none;
   color: white;
   
@@ -84,7 +84,7 @@ position: fixed;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .skill-card {

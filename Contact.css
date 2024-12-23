@@ -22,8 +22,8 @@ header {
 
 .appbar a {
   margin-bottom: 5px;
-  font-size: 1.5em;
-  margin-left: 2em;
+  font-size: 1.4em;
+  margin-left: 1.5em;
   text-decoration: none;
   color: white;
   display: inline-block;
@@ -61,7 +61,7 @@ header {
 /* Contacts */
 #contact {
   color: white;
-  padding-top: 70px;
+  padding-top: 10px;
   height: auto;
   width: 80%;
   margin-left: 10%;
@@ -80,7 +80,7 @@ header {
 
 /* Form Styling */
 .contact-form {
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: 14em;
     background-color: #2f2f33;
     padding: 2rem;

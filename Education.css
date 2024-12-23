@@ -27,8 +27,8 @@ header{
 }
 .appbar a{
   margin-bottom: 5px;
-  font-size: 1.5em;
-  margin-left: 2em;
+  font-size: 1.4em;
+  margin-left: 1.5em;
   text-decoration: none;
   color: white;
   
@@ -75,7 +75,6 @@ header{
 /*Education*/
 #education{
   color: white;
-  margin-top: 0;
   height: 320px;
   width: 80%;
   margin-left: 10%;
@@ -98,7 +97,7 @@ header{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .education-card {
