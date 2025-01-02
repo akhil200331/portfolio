@@ -165,6 +165,9 @@ header{
  .certification-card a{
   margin:0 0 0 0%;
  }
+ #certification{
+  padding-top: 60px;
+}
  header {
     height: 40px;  /* Increased height to accommodate hamburger */
     background-color: #06112a;
@@ -259,7 +262,9 @@ header{
  .certification-card a{
   margin-left: 22%;
  }
- 
+ #certification{
+  padding-top: 60px;
+}
  header {
     height: 40px;  /* Increased height to accommodate hamburger */
     background-color: #06112a;
@@ -351,7 +356,9 @@ header {
     width: 100%;
     z-index: 1000;
   }
-
+#certification{
+  padding-top: 60px;
+}
   .hamburger-menu {
     display: block;
     position: fixed;

@@ -161,7 +161,9 @@ header{
   #icon{
     margin-left: 30%;
   }
- 
+ #interests{
+  padding-top: 60px;
+ }
  header {
     height: 40px;  /* Increased height to accommodate hamburger */
     background-color: #06112a;
@@ -250,7 +252,9 @@ header{
  #interests h1{
   margin-left: 40%;
  }
- 
+ #interests{
+  padding-top: 60px;
+ }
  header {
     height: 40px;  /* Increased height to accommodate hamburger */
     background-color: #06112a;
@@ -331,7 +335,9 @@ header{
   #icon{
   margin-left: 30%;
  }
- 
+ #interests{
+  padding-top: 60px;
+ }
 header {
     height: 40px;  /* Increased height to accommodate hamburger */
     background-color: #06112a;

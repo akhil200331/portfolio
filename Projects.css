@@ -140,6 +140,9 @@ header{
   #icon{
     margin-left: 30%;
   }
+  #projects{
+    padding-top: 60px;
+  }
  
  header {
     height: 40px;  /* Increased height to accommodate hamburger */
@@ -224,7 +227,13 @@ header{
     padding: 0 0.4em;
   }
  #icon{
-  margin-left: 27%;
+  margin-left: 23%;
+ }
+  #projects{
+  padding-top: 60px;
+ }
+ #projects h1{
+  margin-left:38% ;
  }
  
  header {
@@ -306,6 +315,9 @@ header{
   
   #icon{
   margin-left: 30%;
+ }
+ #projects{
+  padding-top: 60px;
  }
  
 header {
